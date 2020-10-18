@@ -1,65 +1,77 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import React, { useState, Component } from 'react';
+import Link from 'next/link';
+import horizVids from '../public/static/data/horizVids'
+import verVids from '../public/static/data/verVids'
 
-export default function Home() {
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+  function getRandomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max));
+  }
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+  const The_Int = getRandomInt(getRandomInt(Object.keys(horizVids).length))
+  //const widdy = Window.innerWidth
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+  class Home extends Component {
+    constructor(props) {
+      super(props);
+      this.state = { 
+        viddy: "",
+        width: 0,
+        randInt: The_Int,
+        horVid: horizVids[The_Int],
+        verVid: verVids[The_Int],
+        vidClass: ""
+     }
+      this.vidOrientation = this.vidOrientation.bind(this)
+      console.log(The_Int)
+    }
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+    vidOrientation() {
+      this.setState({width: window.innerWidth})
+      const breakpoint = 790;
+      console.log(window.innerWidth)
+      if(this.state.width > breakpoint ){
+        console.log("yup")
+        this.setState({
+          viddy: <source src={this.state.horVid} type="video/mp4" className="horVid"/>,
+          vidClass: "horiz"
+        })
+      } else {
+        this.setState({
+          viddy: <source src={this.state.verVid} type="video/mp4" className="verVid"/>,
+          vidClass: "vert"
+        })
+      }
+    }
+    
+    
+    componentDidMount(){
+      this.vidOrientation();
+      window.addEventListener("resize", this.vidOrientation);
+    }
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+    componentWillUnmount(){
+      window.removeEventListener("resize", this.vidOrientation);
+    }
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+    render() { 
+      return (
+        <div className="pageWrapper">
+          <div className="col mainPage" style={{width: '100%'}}>
+          <div className="linksRow">
+              <button className = "mainPageButton"><Link href='/listen'>Listen</Link></button>
+              <button className = "mainPageButton"><Link href='/contact'>Contact</Link></button>
+              <button className = "mainPageButton"><Link href='/'>Patreon</Link></button>
+              <button className = "mainPageButton"><Link href='/about'>About</Link></button>
+              <button className = "mainPageButton"><Link href='/blog'>Blog</Link></button>
+            </div>
+            <video autoPlay playsInline muted loop className={`bgVid ${this.state.vidClass}`}>
+              {this.state.viddy}
+            </video>
+          </div>
+      </div>
+      )
+    }
+  }
+   
+  export default Home;
 
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
-}

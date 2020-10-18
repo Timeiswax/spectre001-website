@@ -1,0 +1,45 @@
+import React, { useState } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faBars, faRss} from '@fortawesome/free-solid-svg-icons'
+import { CSSTransition } from 'react-transition-group'
+import { faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons'
+import Link from 'next/link'
+
+const Nav = () => {
+    const [overlay, toggleOverlay] = useState(false);
+
+    return(
+        <nav className="navigation">
+            <button className="menuButton" onClick={() => {toggleOverlay(!overlay)}}>
+                <FontAwesomeIcon icon={faBars} className="navBars"/>
+            </button>
+            <img src="/static/svg/spectre-logo-small.svg" alt="Spectre 001"/>
+            <CSSTransition
+            in={overlay}
+            appear={true}
+            timeout={750}
+            classNames="overlay"
+            >
+                <div className="navOverlay">
+                    <div className="col">
+                        <ul>
+                            <li className='navLinks'><Link href='/'>Home</Link></li>
+                            <li className='navLinks'><Link href='/listen'>Listen</Link></li>
+                            <li className='navLinks'><Link href='/contact'>Contact</Link></li>
+                            <li className='navLinks'><Link href='/about'>About</Link></li>
+                            <li className='navLinks'><Link href='/'>Support us on Patreon</Link></li>
+                            <li className='navLinks'><Link href='/blog'>Blog</Link></li>
+                        </ul>
+                        <div className="row socialRow-nav">
+                            <a href="twitter.com" ><FontAwesomeIcon icon={faTwitter}></FontAwesomeIcon></a>
+                            <a href="/" ><FontAwesomeIcon icon={faRss}></FontAwesomeIcon></a>
+                            <a href="instagram.com" ><FontAwesomeIcon icon={faInstagram}></FontAwesomeIcon></a>
+                        </div>
+                    </div>
+                </div>
+            </CSSTransition>
+        </nav>
+    )
+}
+
+export default Nav
