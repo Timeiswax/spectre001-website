@@ -14,11 +14,8 @@ import verVids from '../public/static/data/verVids'
     constructor(props) {
       super(props);
       this.state = { 
-        viddy: "",
-        width: 0,
         randInt: The_Int,
-        horVid: horizVids[The_Int],
-        verVid: verVids[The_Int],
+        vid: "",
         vidClass: ""
      }
       this.vidOrientation = this.vidOrientation.bind(this)
@@ -26,23 +23,23 @@ import verVids from '../public/static/data/verVids'
     }
 
     vidOrientation() {
-      this.setState({width: window.innerWidth})
+      let width = window.innerWidth;
       const breakpoint = 790;
       console.log(window.innerWidth)
-      if(this.state.width > breakpoint ){
-        console.log("yup")
+      if(width > breakpoint ){
+        console.log(horizVids[this.state.randInt])
         this.setState({
-          viddy: <source src={this.state.horVid} type="video/mp4" className="horVid"/>,
+          vid: horizVids[this.state.randInt],
           vidClass: "horiz"
         })
       } else {
+        console.log(verVids[this.state.randInt])
         this.setState({
-          viddy: <source src={this.state.verVid} type="video/mp4" className="verVid"/>,
+          vid: verVids[The_Int],
           vidClass: "vert"
         })
       }
     }
-    
     
     componentDidMount(){
       this.vidOrientation();
@@ -65,7 +62,7 @@ import verVids from '../public/static/data/verVids'
               <button className = "mainPageButton"><Link href='/blog'>Blog</Link></button>
             </div>
             <video autoPlay playsInline muted loop className={`bgVid ${this.state.vidClass}`}>
-              {this.state.viddy}
+              <source src={this.state.vid} type="video/mp4" />
             </video>
           </div>
       </div>
