@@ -16,7 +16,8 @@ import verVids from '../public/static/data/verVids'
       this.state = { 
         randInt: The_Int,
         vid: "",
-        vidClass: ""
+        vidClass: "",
+        isLoading: true
      }
       this.vidOrientation = this.vidOrientation.bind(this)
       console.log(The_Int)
@@ -24,6 +25,7 @@ import verVids from '../public/static/data/verVids'
 
     vidOrientation() {
       let width = window.innerWidth;
+      console.log(this.state.isLoading)
       const breakpoint = 790;
       console.log(window.innerWidth)
       if(width > breakpoint ){
@@ -61,8 +63,17 @@ import verVids from '../public/static/data/verVids'
               <button className = "mainPageButton"><Link href='/about'>About</Link></button>
               <button className = "mainPageButton"><Link href='/blog'>Blog</Link></button>
             </div>
-            <video autoPlay playsInline muted loop className={`bgVid ${this.state.vidClass}`}>
-              <source src={this.state.vid} type="video/mp4" />
+            <div>poopy</div>
+            <video 
+              autoPlay 
+              playsInline 
+              muted 
+              loop 
+              className={`bgVid ${this.state.vidClass}`}
+              src={this.state.vid} 
+              type="video/mp4" 
+              oncanplay={() => this.setState({isLoading: false})}
+            >
             </video>
           </div>
       </div>
