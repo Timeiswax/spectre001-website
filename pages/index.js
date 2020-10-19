@@ -63,7 +63,7 @@ import verVids from '../public/static/data/verVids'
               <button className = "mainPageButton"><Link href='/about'>About</Link></button>
               <button className = "mainPageButton"><Link href='/blog'>Blog</Link></button>
             </div>
-            <div>poopy</div>
+            <div>The cool video is loading hold your goddamn horses</div>
             <video 
               autoPlay 
               playsInline 
