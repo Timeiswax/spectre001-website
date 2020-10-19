@@ -1,9 +1,9 @@
 const horizVids = [
-    'static/mp4/tiger_horiz.mp4',
-    'static/mp4/podcaster_horiz.mp4',
-    'static/mp4/idiots_horiz.mp4',
-    'static/mp4/daddies_horiz.mp4',
-    'static/mp4/cocks_horiz.mp4',
+    'static/mp4/pre-comp horz.mp4',
+    'static/mp4/pre-comp horiz_1.mp4',
+    'static/mp4/pre-comp horiz_2.mp4',
+    'static/mp4/pre-comp horiz_3.mp4',
+    'static/mp4/pre-comp horiz_4.mp4',
 ]
 
 
