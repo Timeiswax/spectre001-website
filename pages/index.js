@@ -53,6 +53,10 @@ import verVids from '../public/static/data/verVids'
     }
 
     render() { 
+      let loader
+      if(this.state.isLoading == true){
+        loader = <div>The cool video is loading hold your goddamn horses</div>
+      } else {loader = <div></div>}
       return (
         <div className="pageWrapper">
           <div className="col mainPage" style={{width: '100%'}}>
@@ -63,7 +67,7 @@ import verVids from '../public/static/data/verVids'
               <button className = "mainPageButton"><Link href='/about'>About</Link></button>
               <button className = "mainPageButton"><Link href='/blog'>Blog</Link></button>
             </div>
-            <div>The cool video is loading hold your goddamn horses</div>
+            {this.loader}
             <video 
               autoPlay 
               playsInline 
@@ -72,7 +76,7 @@ import verVids from '../public/static/data/verVids'
               className={`bgVid ${this.state.vidClass}`}
               src={this.state.vid} 
               type="video/mp4" 
-              oncanplay={() => this.setState({isLoading: false})}
+              // onLoadedData={() => this.setState({isLoading: false})}
             >
             </video>
           </div>
