@@ -169,6 +169,10 @@ video::-internal-media-controls-overlay-cast-button {
   margin-top: 3px;
 }
 
+.navigation img:hover{
+  cursor: pointer;
+}
+
 .menuButton {
   position: absolute;
   left: 10px;

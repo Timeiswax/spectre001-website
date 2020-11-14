@@ -13,7 +13,10 @@ const Nav = () => {
             <button className="menuButton" onClick={() => {toggleOverlay(!overlay)}}>
                 <FontAwesomeIcon icon={faBars} className="navBars"/>
             </button>
-            <img src="/static/svg/spectre-logo-small.svg" alt="Spectre 001"/>
+            <Link href='/'><img src="/static/svg/spectre-logo-small.svg" 
+                                alt="Spectre 001"
+                                style={{"onMouseover":"pointer"}}
+                                /></Link>
             <CSSTransition
             in={overlay}
             appear={true}
@@ -31,9 +34,9 @@ const Nav = () => {
                             <li className='navLinks'><Link href='/blog'>Blog</Link></li>
                         </ul>
                         <div className="row socialRow-nav">
-                            <a href="twitter.com" ><FontAwesomeIcon icon={faTwitter}></FontAwesomeIcon></a>
+                            <a href="https://twitter.com/spectre001pod?s=11" ><FontAwesomeIcon icon={faTwitter}></FontAwesomeIcon></a>
                             <a href="/" ><FontAwesomeIcon icon={faRss}></FontAwesomeIcon></a>
-                            <a href="instagram.com" ><FontAwesomeIcon icon={faInstagram}></FontAwesomeIcon></a>
+                            <a href="https://www.instagram.com/spectre001podcast/" ><FontAwesomeIcon icon={faInstagram}></FontAwesomeIcon></a>
                         </div>
                     </div>
                 </div>

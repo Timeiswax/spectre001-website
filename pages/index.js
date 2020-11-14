@@ -7,7 +7,29 @@ import verVids from '../public/static/data/verVids'
     return Math.floor(Math.random() * Math.floor(max));
   }
 
-  const The_Int = getRandomInt(getRandomInt(Object.keys(horizVids).length))
+  function shuffle(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+  
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+  
+      // Pick a remaining element...
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+  
+      // And swap it with the current element.
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
+    }
+  
+    return array;
+  }
+
+
+  const The_Int = 1 //etRandomInt(getRandomInt(Object.keys(horizVids).length))
+  shuffle(horizVids)
+  console.log(horizVids)
   //const widdy = Window.innerWidth
 
   class Home extends Component {
@@ -25,17 +47,13 @@ import verVids from '../public/static/data/verVids'
 
     vidOrientation() {
       let width = window.innerWidth;
-      console.log(this.state.isLoading)
       const breakpoint = 790;
-      console.log(window.innerWidth)
       if(width > breakpoint ){
-        console.log(horizVids[this.state.randInt])
         this.setState({
           vid: horizVids[this.state.randInt],
           vidClass: "horiz"
         })
       } else {
-        console.log(verVids[this.state.randInt])
         this.setState({
           vid: verVids[The_Int],
           vidClass: "vert"

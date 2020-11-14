@@ -1,0 +1,42 @@
+
+        <?xml version="1.0" encoding="UTF-8"?>
+        <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+            
+                        <url>
+                            <loc>https://spectre001pod.com//404</loc>
+                        </url>
+                    
+                        <url>
+                            <loc>https://spectre001pod.com//contact</loc>
+                        </url>
+                    
+                        <url>
+                            <loc>https://spectre001pod.com/</loc>
+                        </url>
+                    
+                        <url>
+                            <loc>https://spectre001pod.com//listen</loc>
+                        </url>
+                    
+                        <url>
+                            <loc>https://spectre001pod.com//about/[aboutDetail]</loc>
+                        </url>
+                    
+                        <url>
+                            <loc>https://spectre001pod.com//about/index</loc>
+                        </url>
+                    
+                        <url>
+                            <loc>https://spectre001pod.com//contexts/blogContextProvider</loc>
+                        </url>
+                    
+                        <url>
+                            <loc>https://spectre001pod.com//blog/[blogPost]</loc>
+                        </url>
+                    
+                        <url>
+                            <loc>https://spectre001pod.com//blog/index</loc>
+                        </url>
+                    
+        </urlset>
+    
