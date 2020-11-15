@@ -27,15 +27,15 @@
                         </url>
                     
                         <url>
-                            <loc>https://spectre001pod.com//contexts/blogContextProvider</loc>
-                        </url>
-                    
-                        <url>
                             <loc>https://spectre001pod.com//blog/[blogPost]</loc>
                         </url>
                     
                         <url>
                             <loc>https://spectre001pod.com//blog/index</loc>
+                        </url>
+                    
+                        <url>
+                            <loc>https://spectre001pod.com//contexts/blogContextProvider</loc>
                         </url>
                     
         </urlset>
