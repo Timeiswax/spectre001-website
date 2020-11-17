@@ -35,7 +35,7 @@ const Nav = () => {
                         </ul>
                         <div className="row socialRow-nav">
                             <a href="https://twitter.com/spectre001pod?s=11" ><FontAwesomeIcon icon={faTwitter}></FontAwesomeIcon></a>
-                            <a href="/" ><FontAwesomeIcon icon={faRss}></FontAwesomeIcon></a>
+                            <a href="https://feed.podbean.com/spectre001/feed.xml" ><FontAwesomeIcon icon={faRss}></FontAwesomeIcon></a>
                             <a href="https://www.instagram.com/spectre001podcast/" ><FontAwesomeIcon icon={faInstagram}></FontAwesomeIcon></a>
                         </div>
                     </div>
