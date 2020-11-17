@@ -3,10 +3,6 @@ import Link from 'next/link';
 import horizVids from '../public/static/data/horizVids'
 import verVids from '../public/static/data/verVids'
 
-  function getRandomInt(max) {
-    return Math.floor(Math.random() * Math.floor(max));
-  }
-
   function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
   
@@ -26,11 +22,9 @@ import verVids from '../public/static/data/verVids'
     return array;
   }
 
-
   const The_Int = 1 //etRandomInt(getRandomInt(Object.keys(horizVids).length))
   shuffle(horizVids)
-  console.log(horizVids)
-  //const widdy = Window.innerWidth
+  shuffle(verVids)
 
   class Home extends Component {
     constructor(props) {
@@ -47,8 +41,10 @@ import verVids from '../public/static/data/verVids'
 
     vidOrientation() {
       let width = window.innerWidth;
-      const breakpoint = 790;
-      if(width > breakpoint ){
+      let height = window.innerHeight;
+      let aspect_ratio = width / height
+      const breakpoint = 1;
+      if(aspect_ratio > breakpoint ){
         this.setState({
           vid: horizVids[this.state.randInt],
           vidClass: "horiz"
@@ -59,6 +55,7 @@ import verVids from '../public/static/data/verVids'
           vidClass: "vert"
         })
       }
+      console.log(aspect_ratio)
     }
     
     componentDidMount(){

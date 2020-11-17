@@ -1,7 +1,7 @@
 const AboutUs =[
     {
         "name": "About the Podcast",
-        "twitter": "spectre001",
+        "twitter": "spectre001pod",
         'picture': require('../jpg/spectre-group-1.jpg'),
         'about': "Spectre 001 is a podcast started, kinda sorta, in 2018 after its cast started playing a weekly game of Dungeons and Dragons together. Fast-forard a few years and that same group of guys decided to try a new system and just kinda record themselves doing it. Every week, Pat, Garrett, Tom, and Shane dig a little deeper into a universe envisioned by Joe in a massive, sprawling space opera.  Or... some shit like that."
     },
@@ -22,7 +22,7 @@ const AboutUs =[
     {
         "name": "Garrett Beels",
         "twitter": "gmans789",
-        "character": "Gage",
+        "character": "gbeelsthereal",
         "picture": require("../jpg/garrett.jpg"),
         "about": "I am a big fan of Garrett, but this guy ALSO didn't write a fucking bio despite being the guy who wanted bios from all of us in the first place. What a fucking CHUMP. Man went directly from living with his parents as a young weenie college grad to buying a house and immediately becoming an old ass man tryna fix drywall and shit. Jabroni."
     },

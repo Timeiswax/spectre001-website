@@ -13,7 +13,7 @@ const Nav = () => {
             <button className="menuButton" onClick={() => {toggleOverlay(!overlay)}}>
                 <FontAwesomeIcon icon={faBars} className="navBars"/>
             </button>
-            <Link href='/'><img src="/static/svg/spectre-logo-small.svg" 
+            <Link href='/'><img src="/static/png/spectre-logo-small.png" 
                                 alt="Spectre 001"
                                 style={{"onMouseover":"pointer"}}
                                 /></Link>

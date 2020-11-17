@@ -165,8 +165,8 @@ video::-internal-media-controls-overlay-cast-button {
 }
 
 .navigation img{
-  width: 200px;
-  margin-top: 3px;
+  height: 35px;
+  margin-top: 14px;
 }
 
 .navigation img:hover{
