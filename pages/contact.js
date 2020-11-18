@@ -2,6 +2,7 @@ import React from 'react';
 import Nav from '../components/nav'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons'
+import Link from 'next/link'
 
 function Contact() {
 
@@ -15,8 +16,8 @@ function Contact() {
           <span>Or follow us on the socials:</span>
           <div style={{"height":"30px"}} />
           <div className="row socialRow">
-            <a href="twitter.com" ><FontAwesomeIcon icon={faTwitter}></FontAwesomeIcon></a>
-            <a href="instagram.com" ><FontAwesomeIcon icon={faInstagram}></FontAwesomeIcon></a>
+            <Link href="https://twitter.com/spectre001pod?s=11" ><FontAwesomeIcon icon={faTwitter}></FontAwesomeIcon></Link>
+            <Link href="https://www.instagram.com/spectre001pod.com" ><FontAwesomeIcon icon={faInstagram}></FontAwesomeIcon></Link>
           </div>
         </div>
       </div>

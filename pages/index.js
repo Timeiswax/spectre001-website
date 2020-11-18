@@ -78,7 +78,7 @@ import verVids from '../public/static/data/verVids'
           <div className="linksRow">
               <button className = "mainPageButton"><Link href='/listen'>Listen</Link></button>
               <button className = "mainPageButton"><Link href='/contact'>Contact</Link></button>
-              <button className = "mainPageButton"><Link href='/'>Patreon</Link></button>
+              {/* <button className = "mainPageButton"><Link href='/'>Patreon</Link></button> */}
               <button className = "mainPageButton"><Link href='/about'>About</Link></button>
               <button className = "mainPageButton"><Link href='/blog'>Blog</Link></button>
             </div>
