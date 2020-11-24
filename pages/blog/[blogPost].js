@@ -13,8 +13,11 @@ function BlogPost() {
     const route = router.query.blogPost;
     const items = context.items;
     const expObjects = Object.values(items).filter(list => {
+        // console.log(list.title.toLowerCase())
+        console.log('baba')
+        console.log(route)
         return(
-            list.title.toLowerCase() === route
+            list.title === route
         )
     });
     const title = expObjects.map(thing => {return(thing.title)})
@@ -29,7 +32,7 @@ function BlogPost() {
             <div className="postContent">
                 <h1>{title}</h1>
                 <h2>Created by {author} on {dop}</h2>
-                {<ReactMarkdown source={content[0]}/>}
+                <ReactMarkdown source={content[0]}/>
             </div>
         </div>
         

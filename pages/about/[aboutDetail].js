@@ -35,12 +35,12 @@ function AboutDetail() {
                 </a>
                 <img src={dude.picture}alt={dude.name} className='detailPic'></img>
                 <ReactMarkdown source={dude.about}/>
-                <Link href='/about' >
+                {/* <Link href='/about' >
                   <div className="about-return">
                     <FontAwesomeIcon icon={faChevronLeft} />
                     <a>return to about</a>
                   </div>
-                </Link>
+                </Link> */}
               </div>
         </div>
         );

@@ -28,7 +28,7 @@ const AboutUs =[
     },
     {
         "name": "Tom Ostrom",
-        "twitter": "timaeus",
+        "twitter": "tomstesseract",
         'character': 'Cephus Legorious Anal Retrograde King',
         'picture': require('../jpg/tom.jpg'),
         'about': "Big love for Tom for the most part, but as the next guy who didn't write a goddamn bio... what a bitch. You know that feeling when you go for a run but it's pretty cold out and after you're done and trying to pee your dong is like shrunk and weirdly dense, like in an alien kinda way that you've never experienced before? This man's entire personality. Jabroni"

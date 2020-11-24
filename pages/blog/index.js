@@ -15,6 +15,7 @@ class BlogIntro extends Component {
             var guy = items[post]
             return(
                     <BlogCard 
+                        key={guy.title}
                         title={guy.title} 
                         content={guy.content} 
                         dop={guy.date_of_pub} 
